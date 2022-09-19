@@ -47,7 +47,7 @@ function copiar(){
     navigator.clipboard.writeText(muestraTexto.value)
     muestraTexto.value=""   //cuando copia deja vacio el textarea2 
     textarea.focus();  //vuelvo el foco al textarea para que sea mas facil pegar
-    muestraTexto.style.backgroundImage="url('muñeco.png')" //tuve que poner comillas dobles y adentro simples
+    muestraTexto.style.backgroundImage="url('Muñeco.png')" //tuve que poner comillas dobles y adentro simples
     return Swal.fire({
         title: 'Copiado',
         text: 'Texto copiado con exito!',
