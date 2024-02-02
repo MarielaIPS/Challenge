@@ -56,6 +56,14 @@ function copiar(){
       })
 }  
 
+function pegarTexto() {
+ // Accede al portapapeles
+ navigator.clipboard.readText().then(texto => {
+    textarea.value=texto
+  })
+}
+
+
 var button= document.getElementById("encriptar"); // la var button tiene como valor el boton de html con el Id "encriptar"
 button.onclick= encriptar; //NOMBRE DE FUNCION A  LA QUE VA A ENTRAR PARA ENCRIPTAR recordar no poner parentesis al final del nombre.
 
@@ -65,4 +73,5 @@ button2.onclick=desencriptar; //NOMBRE DE FUNCION A  LA QUE VA A ENTRAR PARA DES
 var Copiar=document.getElementById("Copiar");
 Copiar.onclick=copiar;   //la funcion que va a copiar 
 
-
+var Pegar=document.getElementById("pegar");
+Pegar.onclick= pegarTexto;
