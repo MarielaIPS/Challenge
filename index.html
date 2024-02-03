@@ -5,33 +5,37 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <!--<link rel="stylesheet" href="reset.css"> !-->
-    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="reset.css">
+    <!-- <link rel="stylesheet" href="style.css"> -->
+    <link rel="stylesheet" href="style2.css">
     <link href="https://fonts.googleapis.com/css2?family=DM+Serif+Display:ital@1&display=swap" rel="stylesheet">
     <title>Encriptador</title>
 </head>
 
 <body>
     <header>
-        <h1> <img src="Vector.png" alt="logo alura"> Encriptador</h1>
+        <h1>Encriptador</h1>
         <h2> Primer Challage de Programa One Alura-Oracle</h2>
     </header>
 
     <main>
-        <section>
+        <section id="primer_section">
             <textarea class="textarea" id="textarea" placeholder="Ingrese su texto"></textarea>
-            <p id="pmain">&#9888; No Desencripta caracteres con acento!</p>
+            <p id="pmain">&#9888; Escriba lo que quiera Encriptar o Desencriptar!</p>
+           <div class="botones">
             <button id="encriptar"> Encriptar </button>
             <button id="desencriptar"> Desencriptar </button>
-
+           </div>
+            
         </section>
 
-        <section>
-
+        <section id="segundo_section">
             <textarea id="textarea2" placeholder="Ingrese su mensaje para desencriptar"></textarea>
-
+            <div class="botones">
             <button id="Copiar"> Copiar</button>
-            <button id="pegar" class= 'editor'>Pegar</button>
+            <button id="pegar" class= 'editor'>Pegar</button>  
+            </div>
+            
         </section>
 
     </main>
