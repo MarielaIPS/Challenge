@@ -1,5 +1,4 @@
 
-
 var textarea=document.getElementById("textarea");
 
 var muestraTexto=document.getElementById("textarea2");
@@ -43,11 +42,10 @@ function  desencriptar(){
 
 function copiar(){
     muestraTexto.select();  //selecciona todo lo que hay en muestratexto .select() es una funcion definida en js (propio de js)
-    //document.execCommand('copy');//lo copia, es propio de js (ya no se debe usar esto! )
     navigator.clipboard.writeText(muestraTexto.value)
     muestraTexto.value=""   //cuando copia deja vacio el textarea2 
-    textarea.focus();  //vuelvo el foco al textarea para que sea mas facil pegar
-    muestraTexto.style.backgroundImage="url('Muñeco.png')" //tuve que poner comillas dobles y adentro simples
+    textarea.focus();  //vuelvo el foco al textarea1 para que sea mas facil pegar
+    muestraTexto.style.backgroundImage="url('Munieco.png')" //tuve que poner comillas dobles y adentro simples
     return Swal.fire({
         title: 'Copiado',
         text: 'Texto copiado con exito!',
@@ -63,15 +61,15 @@ function pegarTexto() {
   })
 }
 
-
-var button= document.getElementById("encriptar"); // la var button tiene como valor el boton de html con el Id "encriptar"
-button.onclick= encriptar; //NOMBRE DE FUNCION A  LA QUE VA A ENTRAR PARA ENCRIPTAR recordar no poner parentesis al final del nombre.
+//Defino variables con los elementos html para luego agregar funciones
+var button= document.getElementById("encriptar"); 
+button.onclick= encriptar; // recordar no poner parentesis al final de la funcion.
 
 var button2= document.getElementById("desencriptar");
-button2.onclick=desencriptar; //NOMBRE DE FUNCION A  LA QUE VA A ENTRAR PARA DESENCRIPTAR
+button2.onclick=desencriptar;
 
 var Copiar=document.getElementById("Copiar");
-Copiar.onclick=copiar;   //la funcion que va a copiar 
+Copiar.onclick=copiar; 
 
 var Pegar=document.getElementById("pegar");
 Pegar.onclick= pegarTexto;
